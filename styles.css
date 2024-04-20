@@ -5,3 +5,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #58A399;
+    background-image: url(./images/background-img.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.left-side {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    background-color: maroon;
+}
+
+.right-side {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    background-color: maroon;
+}
