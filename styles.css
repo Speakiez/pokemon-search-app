@@ -31,7 +31,7 @@ body {
     height: 615px;
 }
 
-.pokedex-left .top-part {
+.top-part {
     width: 100%;
     height: 65px;
     background-color: var(--pokedex-main);
@@ -40,24 +40,33 @@ body {
     border-top-right-radius: 8px;
 }
 
-.pokedex-left .divider {
+.bottom-part {
+    width: 100%;
+    height: 475px;
+    background-color: var(--pokedex-main);
+    border: 3px solid var(--pokedex-borders);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.divider {
     display: flex;
     width: 100%;
     height: 90px;
     background-color: var(--pokedex-incline);
 }
 
-.pokedex-left .divider .top-indent::before,
-.pokedex-left .divider .top-indent::after,
-.pokedex-left .divider .bottom-indent::before,
-.pokedex-left .divider .bottom-indent::after {
+.top-indent::before,
+.top-indent::after,
+.bottom-indent::before,
+.bottom-indent::after {
     content: "";
     display: block;
     width: 0;
     height: 0;
 }
 
-.pokedex-left .divider .top-indent {
+.top-indent {
     width: var(--top-indent-width);
     height: 78px;
     translate: 0 -3px;
@@ -66,19 +75,19 @@ body {
     border-bottom: 3px solid var(--pokedex-borders);
 }
 
-.pokedex-left .divider .top-indent::before {
+.top-indent::before {
     translate: calc(var(--top-indent-width) - 3px) 3px;
     border-top: 75px solid var(--pokedex-borders);
     border-right: 75px solid transparent;
 }
 
-.pokedex-left .divider .top-indent::after {
+.top-indent::after {
     translate: calc(var(--top-indent-width) - 3px) -75px;
     border-top: 75px solid var(--pokedex-main);
     border-right: 75px solid transparent;
 }
 
-.pokedex-left .divider .bottom-indent {
+.bottom-indent {
     width: var(--bottom-indent-width);
     height: 78px;
     translate: calc(45% - 1px) 12px;
@@ -87,23 +96,14 @@ body {
     border-right: 3px solid var(--pokedex-borders);
 }
 
-.pokedex-left .divider .bottom-indent::before {
+.bottom-indent::before {
     translate: -75px -3px;
     border-bottom: 75px solid var(--pokedex-borders);
     border-left: 75px solid transparent;
 }
 
-.pokedex-left .divider .bottom-indent::after {
+.bottom-indent::after {
     translate: -75px -75px;
     border-bottom: 75px solid var(--pokedex-main);
     border-left: 75px solid transparent;
-}
-
-.pokedex-left .bottom-part {
-    width: 100%;
-    height: 475px;
-    background-color: var(--pokedex-main);
-    border: 3px solid var(--pokedex-borders);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
