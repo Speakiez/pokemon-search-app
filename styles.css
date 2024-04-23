@@ -2,8 +2,6 @@
     --pokedex-main: #DC0A2D;
     --pokedex-incline: #8B051D;
     --pokedex-borders: #7D0011;
-    --top-indent-width: 140px;
-    --bottom-indent-width: 180px;
 }
 
 *,
@@ -69,7 +67,7 @@ body {
 }
 
 .top-indent {
-    width: var(--top-indent-width);
+    width: 140px;
     height: 78px;
     translate: 0 -3px;
     background-color: var(--pokedex-main);
@@ -78,19 +76,19 @@ body {
 }
 
 .top-indent::before {
-    translate: calc(var(--top-indent-width) - 3px) 3px;
+    translate: 137px 3px;
     border-top: 75px solid var(--pokedex-borders);
     border-right: 75px solid transparent;
 }
 
 .top-indent::after {
-    translate: calc(var(--top-indent-width) - 3px) -75px;
+    translate: 137px -75px;
     border-top: 75px solid var(--pokedex-main);
     border-right: 75px solid transparent;
 }
 
 .bottom-indent {
-    width: var(--bottom-indent-width);
+    width: 180px;
     height: 78px;
     translate: calc(45% - 1px) 12px;
     background-color: var(--pokedex-main);
@@ -115,7 +113,8 @@ body {
 .cylinder {
     width: 50px;
     height: 554px;
-    translate: -50px 30px;
+    position: absolute;
+    translate: 0 30px;
     background-color: var(--pokedex-main);
     border: 3px solid var(--pokedex-borders);
     border-radius: 8px;
@@ -151,4 +150,54 @@ body {
     translate: 7px -23px;
     background-color: #F0506A;
     border-radius: 4px;
+}
+
+/* Pokedex's Right Side Styling */
+
+.pokedex-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 350px;
+    height: 615px;
+    border-radius: 8px;
+}
+
+.side {
+    width: 355px;
+    height: 463px;
+    margin-left: -5px;
+    background-color: var(--pokedex-main);
+    border: 3px solid var(--pokedex-borders);
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, .5);
+}
+
+.side-indent {
+    width: 130px;
+    height: 78px;
+    translate: 2px -78px;
+    background-color: var(--pokedex-main);
+    border-top: 3px solid var(--pokedex-borders);
+    
+}
+
+.side-indent::before,
+.side-indent::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.side-indent::before {
+    translate: 130px -3px;
+    border-bottom: 75px solid var(--pokedex-borders);
+    border-right: 75px solid transparent;
+}
+
+.side-indent::after {
+    translate: 130px -75px;
+    border-bottom: 75px solid var(--pokedex-main);
+    border-right: 75px solid transparent;
 }
