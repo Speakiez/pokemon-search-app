@@ -29,6 +29,8 @@ body {
     flex-direction: column;
     width: 400px;
     height: 615px;
+    border-radius: 8px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, .5);
 }
 
 .top-part {
@@ -106,4 +108,47 @@ body {
     translate: -75px -75px;
     border-bottom: 75px solid var(--pokedex-main);
     border-left: 75px solid transparent;
+}
+
+/* Cylinder Styling */
+
+.cylinder {
+    width: 50px;
+    height: 554px;
+    translate: -50px 30px;
+    background-color: var(--pokedex-main);
+    border: 3px solid var(--pokedex-borders);
+    border-radius: 8px;
+}
+
+.cylinder::before, 
+.cylinder::after {
+    content: '';
+    display: block;
+}
+
+.cylinder::before {
+    width: 44px;
+    height: 20px;
+    translate: 0 -7px;
+    background-color: var(--pokedex-main);
+    border-top: 3px solid var(--pokedex-borders);
+    border-radius: 50%;
+}
+
+.cylinder::after {
+    width: 50px;
+    height: 20px;
+    translate: -3px 517px;
+    background-color: var(--pokedex-borders);
+    border-radius: 50%;
+}
+
+.lighting {
+    width: 10px;
+    height: 540px;
+    position: absolute;
+    translate: 7px -23px;
+    background-color: #F0506A;
+    border-radius: 4px;
 }
