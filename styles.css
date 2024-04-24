@@ -317,7 +317,7 @@ body {
     width: 125px;
     height: 30px;
     position: absolute;
-    translate: 85px -30px;
+    translate: 85px -27px;
 }
 
 .light {
@@ -331,7 +331,7 @@ body {
     width: 50px;
     height: 50px;
     position: absolute;
-    translate: 12px -30px;
+    translate: 12px -27px;
     background-color: #00312B;
     border: 3px solid #000B12;
     border-radius: 50%;
@@ -348,7 +348,7 @@ body {
     width: 151px;
     height: 75px;
     position: absolute;
-    translate: 72px 12px;
+    translate: 72px 18px;
     background-color: #51AD60;
     border: 3px solid var(--pokedex-borders);
     border-radius: 8px;
@@ -356,6 +356,48 @@ body {
     font-size: 1.25rem;
     font-weight: bold;
     color: #FFFFFF;
+}
+
+.d-pad {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    translate: 262px 18px;
+    background-color: #00312B;
+}
+
+.direction {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #00312B;
+    border: 3px solid #000B12;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.direction:active {
+    background-color: #000B12;
+}
+
+.up {
+    translate: 0px -29px;
+    border-bottom: 0;
+}
+
+.down {
+    translate: 0px 29px;
+    border-top: 0;
+}
+
+.left {
+    translate: -29px 0;
+    border-right: 0;
+}
+
+.right {
+    translate: 29px 0;
+    border-left: 0;
 }
 
 /* Cylinder Styling */
