@@ -20,6 +20,22 @@ body {
     background-color: #31363F;
 }
 
+.red {
+    background-color: #E9355A;
+}
+
+.yellow {
+    background-color: #FCEC64;
+}
+
+.green {
+    background-color: #5CA66D;
+}
+
+.blue {
+    background-color: #28AAFD;
+}
+
 /* Pokedex's Left Side Styling */
 
 .pokedex-left {
@@ -107,18 +123,6 @@ body {
     height: 20px;
     border: 3px solid var(--pokedex-borders);
     border-radius: 50%;
-}
-
-.red {
-    background-color: #E9355A;
-}
-
-.yellow {
-    background-color: #FCEC64;
-}
-
-.green {
-    background-color: #5CA66D;
 }
 
 .bottom-part {
@@ -304,6 +308,23 @@ body {
     translate: 33px -7px;
     background-color: #232323;
     border-radius: 8px;
+}
+
+.two-lights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 125px;
+    height: 30px;
+    position: absolute;
+    translate: 85px -30px;
+}
+
+.light {
+    width: 50px;
+    height: 10px;
+    border: 3px solid var(--pokedex-borders);
+    border-radius: 16px;
 }
 
 /* Cylinder Styling */
