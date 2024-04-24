@@ -220,6 +220,43 @@ body {
     border-left: 75px solid transparent;
 }
 
+.img-container {
+    width: 250px;
+    height: 275px;
+    translate: 40px -40px;
+    background-color: #DEDEDE;
+    border: 3px solid var(--pokedex-borders);
+    box-shadow: 0 3px 0 #848585;
+}
+
+.img-container-indent {
+    width: 0;
+    height: 0;
+    translate: -3px 222px;
+    border-bottom: 50px solid var(--pokedex-borders);
+    border-right: 50px solid transparent;
+}
+
+.img-container-indent::before, 
+.img-container-indent::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.img-container-indent::before {
+    translate: 0 3px;
+    border-bottom: 50px solid #848585;
+    border-right: 50px solid transparent;
+}
+
+.img-container-indent::after {
+    translate: 0 -42px;
+    border-bottom: 50px solid var(--pokedex-main);
+    border-right: 50px solid transparent;
+}
+
 /* Cylinder Styling */
 
 .cylinder {
