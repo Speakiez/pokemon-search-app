@@ -368,6 +368,17 @@ body {
     background-color: #00312B;
 }
 
+.d-pad::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 6px;
+    position: absolute;
+    translate: 0 30px;
+    background-color: #000B12;
+    z-index: -1;
+}
+
 .direction {
     width: 30px;
     height: 30px;
@@ -378,8 +389,18 @@ body {
     cursor: pointer;
 }
 
-.direction:active {
+.up:active {
+    height: 23px;
+    transform: translateY(6px);
     background-color: #000B12;
+}
+
+.down:active,
+.left:active,
+.right:active {
+    transform: translateY(6px);
+    background-color: #000B12;
+    box-shadow: none;
 }
 
 .up {
@@ -390,16 +411,19 @@ body {
 .down {
     translate: 0px 29px;
     border-top: 0;
+    box-shadow: 0 6px 0 #000B12;
 }
 
 .left {
     translate: -29px 0;
     border-right: 0;
+    box-shadow: 0 6px 0 #000B12;
 }
 
 .right {
     translate: 29px 0;
     border-left: 0;
+    box-shadow: 0 6px 0 #000B12;
 }
 
 /* Cylinder Styling */
