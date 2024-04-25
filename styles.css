@@ -563,10 +563,25 @@ body {
 }
 
 .blue-buttons {
-    width: 263px;
-    height: 100px;
-    translate: 33px -18px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 265px;
+    translate: 32px -18px;
+}
+
+.blue-button {
+    width: 53px;
+    height: 45px;
     background-color: #28AAFD;
+    border: 3px solid#035175;
+    box-shadow: 0 6px 0 #035175;
+    cursor: pointer;
+}
+
+.blue-button:active {
+    translate: 0 6px;
+    border-bottom: 0;
+    box-shadow: none;
 }
 
 .black-lines {
@@ -576,14 +591,29 @@ body {
     width: 103px;
     height: 30px;
     position: absolute;
-    translate: 193px -18px;
+    translate: 193px -12px;
 }
 
 .pale-buttons {
-    width: 100px;
-    height: 50px;
-    translate: 33px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 110px;
+    translate: 32px 15px;
+}
+
+.pale-button {
+    width: 53px;
+    height: 45px;
     background-color: #DEDEDE;
+    border: 3px solid #848585;
+    box-shadow: 0 6px 0 #848585;
+    cursor: pointer;
+}
+
+.pale-button:active {
+    translate: 0 6px;
+    border-bottom: 0;
+    box-shadow: none;
 }
 
 .yellow-circle {
