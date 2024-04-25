@@ -310,6 +310,7 @@ body {
     translate: 33px -7px;
     background-color: #232323;
     border-radius: 8px;
+    box-shadow: inset 0 0 16px 10px rgba(0, 0, 0, 0.5);
 }
 
 .two-lights {
@@ -550,3 +551,19 @@ body {
     border-bottom: 75px solid var(--pokedex-main);
     border-right: 75px solid transparent;
 }
+
+.info-container {
+    width: 263px;
+    height: 100px;
+    translate: 33px -40px;
+    background-color: #232323;
+    border-radius: 8px;
+    box-shadow: inset 0 0 16px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* .blue-buttons {
+    width: 263px;
+    height: 100px;
+    translate: 33px -20px;
+    background-color: #232323;
+} */
