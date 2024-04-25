@@ -585,3 +585,12 @@ body {
     translate: 33px 25px;
     background-color: #DEDEDE;
 }
+
+.yellow-circle {
+    width: 35px;
+    height: 35px;
+    translate: 263px -5px;
+    border: 3px solid var(--pokedex-borders);
+    border-radius: 50%;
+    background-color: #FEEC80;
+}
