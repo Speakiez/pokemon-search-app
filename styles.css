@@ -578,3 +578,10 @@ body {
     position: absolute;
     translate: 193px -18px;
 }
+
+.pale-buttons {
+    width: 100px;
+    height: 50px;
+    translate: 33px 25px;
+    background-color: #DEDEDE;
+}
