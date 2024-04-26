@@ -1,3 +1,5 @@
+// Variable Declaration //
+
 const PokedexAPI = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 
 const inputElement = document.getElementById("search-input");
@@ -14,6 +16,20 @@ const specialDefenseSpan = document.getElementById("special-defense");
 const speedSpan = document.getElementById("speed");
 const typesElement = document.getElementById("types");
 
+// Function Declarations //
+
+const formatUserInput = (input) => {
+    return input
+        .toLowerCase()
+        .replace(/ /, "-")
+        .split("")
+        .filter(letter => {
+            const regEx = /[\w-]/;
+            return regEx.test(letter) ? letter : false;
+        })
+        .join("");
+};
+
 const fetchPokedexData = async (pokemon) => {
     try {
         const res = await fetch(`${PokedexAPI}/${pokemon}`);
@@ -24,4 +40,11 @@ const fetchPokedexData = async (pokemon) => {
     }
 };
 
-fetchPokedexData("pikachu");
+// Event Handling //
+
+searchButton.addEventListener("click", () => {
+    const userInput =  formatUserInput(inputElement.value);
+
+    fetchPokedexData(userInput);
+    inputElement.value = "";
+});
