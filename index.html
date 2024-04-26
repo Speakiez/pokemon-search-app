@@ -53,8 +53,8 @@
                     <div class="light red"></div>
                     <div class="light blue"></div>
                 </div>
-                <button class="submit-button"></button>
-                <input class="user-input" type="text" placeholder="Input Pokémon"/>
+                <button id="search-button" class="submit-button"></button>
+                <input id="search-input" class="user-input" type="text" placeholder="Input Pokémon"/>
                 <div class="d-pad">
                     <button class="direction up"></button>
                     <button class="direction down"></button>
@@ -72,18 +72,18 @@
                 <div class="content-indent"></div>
                 <div class="info-container">
                     <div class="info-header">
-                        <span class="info name">PIKACHU</span>
-                        <span class="info id">#25</span>
-                        <span class="info weight">Weight: 60</span>
-                        <span class="info height">Height: 4</span>
+                        <span id="pokemon-name" class="info name">PIKACHU</span>
+                        <span id="pokemon-id" class="info id">#25</span>
+                        <span id="weight" class="info weight">Weight: 60</span>
+                        <span id="height" class="info height">Height: 4</span>
                     </div>
                     <div class="info-body">
-                        <span class="info hp">HP: 35</span>
-                        <span class="info attack">ATK: 55</span>
-                        <span class="info defense">DEF: 40</span>
-                        <span class="info special-attack">SATK: 50</span>
-                        <span class="info special-defense">SDEF: 50</span>
-                        <span class="info speed">SPD: 90</span>
+                        <span id="hp" class="info hp">HP: 35</span>
+                        <span id="attack" class="info attack">ATK: 55</span>
+                        <span id="defense" class="info defense">DEF: 40</span>
+                        <span id="special-attack" class="info special-attack">SATK: 50</span>
+                        <span id="special-defense" class="info special-defense">SDEF: 50</span>
+                        <span id="speed" class="info speed">SPD: 90</span>
                     </div>
                 </div>
                 <div class="blue-buttons">
@@ -107,12 +107,12 @@
                     <button class="pale-button"></button>
                 </div>
                 <div class="yellow-circle"></div>
-                <div class="bottom-info">
-                    <div class="misc-info">
-                        <span class="info type-one"></span>
+                <div id="types" class="types-info">
+                    <div class="type-container">
+                        <span class="info types"></span>
                     </div>
-                    <div class="misc-info">
-                        <span class="info type-two"></span>
+                    <div class="type-container">
+                        <span class="info types"></span>
                     </div>
                 </div>
             </div>

@@ -664,7 +664,7 @@ body {
     background-color: #FEEC80;
 }
 
-.bottom-info {
+.types-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -672,7 +672,7 @@ body {
     translate: 33px 12px;
 }
 
-.misc-info {
+.type-container {
     width: 100px;
     height: 40px;
     background-color: #232323;
