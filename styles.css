@@ -356,10 +356,11 @@ body {
     background-color: #51AD60;
     border: 3px solid var(--pokedex-borders);
     border-radius: 8px;
-    text-align: center;
-    font-size: 1.25rem;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #FFFFFF;
+    text-align: center;
+    color:#FFFFFF;
 }
 
 .d-pad {
@@ -558,7 +559,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     width: 263px;
     height: 100px;
     translate: 33px -40px;
@@ -572,7 +573,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 263px;
-    padding: 0 6px;
+    padding: 0 12px;
 }
 
 .info-body {
@@ -585,8 +586,10 @@ body {
 }
 
 .info {
-    color:#FFFFFF;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
     text-align: center;
+    color:#FFFFFF;
 }
 
 .info-body .info {
