@@ -363,6 +363,11 @@ body {
     color:#FFFFFF;
 }
 
+.user-input::placeholder {
+    text-wrap: wrap;
+    text-align: center;
+}
+
 .d-pad {
     width: 30px;
     height: 30px;
