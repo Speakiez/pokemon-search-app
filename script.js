@@ -30,11 +30,15 @@ const formatUserInput = (input) => {
         .join("");
 };
 
+const updateInfoOnScreen = (data) => {
+
+}
+
 const fetchPokedexData = async (pokemon) => {
     try {
         const res = await fetch(`${PokedexAPI}/${pokemon}`);
         const data = await res.json();
-        console.log(data);
+        updateInfoOnScreen(data);
     } catch (error) {
         alert("Pokémon not found");
     }
@@ -43,7 +47,7 @@ const fetchPokedexData = async (pokemon) => {
 // Event Handling //
 
 searchButton.addEventListener("click", () => {
-    const userInput =  formatUserInput(inputElement.value);
+    const userInput = formatUserInput(inputElement.value);
 
     fetchPokedexData(userInput);
     inputElement.value = "";

@@ -289,12 +289,21 @@ body {
 }
 
 .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 180px;
     height: 170px;
     translate: 33px -7px;
+    overflow: hidden;
     background-color: #232323;
     border-radius: 8px;
     box-shadow: inset 0 0 16px 10px rgba(0, 0, 0, 0.5);
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 .two-lights {
