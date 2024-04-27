@@ -573,7 +573,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 4px;   
     width: 263px;
     height: 100px;
     translate: 33px -40px;
@@ -604,6 +604,17 @@ img {
     font-size: 1.2rem;
     text-align: center;
     color:#FFFFFF;
+}
+
+.identification {
+    display: flex;
+    gap: 12px;
+    translate: 0 -8px;
+}
+
+.measurements {
+    display: flex;
+    flex-direction: column;
 }
 
 .info-body .info {

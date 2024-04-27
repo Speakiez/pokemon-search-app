@@ -38,7 +38,7 @@ const fetchPokedexData = async (pokemon) => {
     try {
         const res = await fetch(`${PokedexAPI}/${pokemon}`);
         const data = await res.json();
-        updateInfoOnScreen(data);
+        return data;
     } catch (error) {
         alert("Pokémon not found");
     }
@@ -47,8 +47,12 @@ const fetchPokedexData = async (pokemon) => {
 // Event Handling //
 
 searchButton.addEventListener("click", () => {
+    if (!inputElement.value) return;
     const userInput = formatUserInput(inputElement.value);
+    const currentData = fetchPokedexData(userInput);
 
-    fetchPokedexData(userInput);
+    currentData.then((value) => {
+        console.log(value);
+    });
     inputElement.value = "";
 });
