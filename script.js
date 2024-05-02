@@ -53,14 +53,14 @@ const updateInfoOnScreen = (data) => {
     idSpan.textContent = `#${id}`;
     nameSpan.textContent = name.toUpperCase();
     imageElement.setAttribute("src", spriteURL);
-    weightSpan.textContent = `Weight: ${weight}`;
-    heightSpan.textContent = `Height: ${height}`;
-    hpSpan.textContent = `HP: ${statValues.hp}`;
-    attackSpan.textContent = `ATK: ${statValues.attack}`;
-    defenseSpan.textContent = `DEF: ${statValues.defense}`;
-    specialAttackSpan.textContent = `SATK: ${statValues["special-attack"]}`;
-    specialDefenseSpan.textContent = `SDEF: ${statValues["special-defense"]}`;
-    speedSpan.textContent = `SPD: ${statValues.speed}`;
+    weightSpan.textContent = `${weight}`;
+    heightSpan.textContent = `${height}`;
+    hpSpan.textContent = `${statValues.hp}`;
+    attackSpan.textContent = `${statValues.attack}`;
+    defenseSpan.textContent = `${statValues.defense}`;
+    specialAttackSpan.textContent = `${statValues["special-attack"]}`;
+    specialDefenseSpan.textContent = `${statValues["special-defense"]}`;
+    speedSpan.textContent = `${statValues.speed}`;
     typesElement.innerHTML = "";
     typeValues.forEach((value) => {
         typesElement.innerHTML += `<div class="type-container">${value.toUpperCase()}</div>`;
