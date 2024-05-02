@@ -4,7 +4,7 @@ const PokedexAPI = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 
 const inputElement = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
-const imageElement = document.getElementById("imgEl");
+const imageElement = document.getElementById("sprite");
 const nameSpan = document.getElementById("pokemon-name");
 const idSpan = document.getElementById("pokemon-id");
 const weightSpan = document.getElementById("weight");
@@ -42,6 +42,8 @@ const fetchPokedexData = async (pokemon) => {
 };
 
 const updateInfoOnScreen = (data) => {
+    if (!data) return;
+
     const { id, name, height, weight, sprites, stats, types } = data;
     const spriteURL = sprites.front_default;
     const typeValues = types.map((value) => value.type.name);
