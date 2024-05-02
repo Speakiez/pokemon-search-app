@@ -706,3 +706,15 @@ img {
     text-align: center;
     color:#FFFFFF;    
 }
+
+.credits {
+    width: 128px;
+    height: auto;
+    position: absolute;
+    translate: -5px -108px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    color: var(--pokedex-incline);
+    text-decoration: none;
+    z-index: 10;
+}
