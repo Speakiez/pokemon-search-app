@@ -30,10 +30,6 @@ const formatUserInput = (input) => {
         .join("");
 };
 
-const updateInfoOnScreen = (data) => {
-
-}
-
 const fetchPokedexData = async (pokemon) => {
     try {
         const res = await fetch(`${PokedexAPI}/${pokemon}`);
@@ -44,15 +40,24 @@ const fetchPokedexData = async (pokemon) => {
     }
 };
 
+const updateInfoOnScreen = (data) => {
+    const { id, name, sprites, stats, types } = data;
+    const spriteURL = sprites.front_default;
+    const statValues = stats.map((value) => [value.stat.name, value.base_stat]);
+    const typeValues = types.map((value, index) => [index, value.type.name]);
+
+    console.log(id, name, spriteURL, statValues, typeValues);
+}
+
 // Event Handling //
 
 searchButton.addEventListener("click", () => {
     if (!inputElement.value) return;
     const userInput = formatUserInput(inputElement.value);
-    const currentData = fetchPokedexData(userInput);
 
-    currentData.then((value) => {
-        console.log(value);
+    fetchPokedexData(userInput).then((value) => {
+        updateInfoOnScreen(value);
     });
+
     inputElement.value = "";
 });
