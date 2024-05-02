@@ -4,6 +4,7 @@ const PokedexAPI = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
 
 const inputElement = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
+const imageElement = document.getElementById("imgEl");
 const nameSpan = document.getElementById("pokemon-name");
 const idSpan = document.getElementById("pokemon-id");
 const weightSpan = document.getElementById("weight");
@@ -41,12 +42,27 @@ const fetchPokedexData = async (pokemon) => {
 };
 
 const updateInfoOnScreen = (data) => {
-    const { id, name, sprites, stats, types } = data;
+    const { id, name, height, weight, sprites, stats, types } = data;
     const spriteURL = sprites.front_default;
-    const statValues = stats.map((value) => [value.stat.name, value.base_stat]);
-    const typeValues = types.map((value, index) => [index, value.type.name]);
+    const typeValues = types.map((value) => value.type.name);
+    const statValues = {};
+    stats.forEach((value) => statValues[value.stat.name] = value.base_stat );
 
-    console.log(id, name, spriteURL, statValues, typeValues);
+    idSpan.textContent = `#${id}`;
+    nameSpan.textContent = name.toUpperCase();
+    imageElement.setAttribute("src", spriteURL);
+    weightSpan.textContent = `Weight: ${weight}`;
+    heightSpan.textContent = `Height: ${height}`;
+    hpSpan.textContent = `HP: ${statValues.hp}`;
+    attackSpan.textContent = `ATK: ${statValues.attack}`;
+    defenseSpan.textContent = `DEF: ${statValues.defense}`;
+    specialAttackSpan.textContent = `SATK: ${statValues["special-attack"]}`;
+    specialDefenseSpan.textContent = `SDEF: ${statValues["special-defense"]}`;
+    speedSpan.textContent = `SPD: ${statValues.speed}`;
+    typesElement.innerHTML = "";
+    typeValues.forEach((value) => {
+        typesElement.innerHTML += `<div class="type-container">${value.toUpperCase()}</div>`;
+    });
 }
 
 // Event Handling //
@@ -60,4 +76,17 @@ searchButton.addEventListener("click", () => {
     });
 
     inputElement.value = "";
+});
+
+inputElement.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        if (!inputElement.value) return;
+        const userInput = formatUserInput(inputElement.value);
+
+        fetchPokedexData(userInput).then((value) => {
+            updateInfoOnScreen(value);
+        });
+
+        inputElement.value = "";
+    }
 });

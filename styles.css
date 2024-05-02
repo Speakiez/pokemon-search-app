@@ -693,9 +693,16 @@ img {
 }
 
 .type-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100px;
     height: 40px;
     background-color: #232323;
     border-radius: 8px;
     box-shadow: inset 0 0 16px 10px rgba(0, 0, 0, 0.5);
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color:#FFFFFF;    
 }
